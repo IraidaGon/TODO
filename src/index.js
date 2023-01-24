@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import PropTypes from "prop-types";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
-import App from "./components/app";
+import App from './components/app';
 
 const initialTasks = [
   //     {
@@ -20,16 +20,13 @@ const initialTasks = [
   // }
 ];
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(
-  <App initialTasks={initialTasks} />,
-  document.getElementById("root")
-);
+root.render(<App initialTasks={initialTasks} />, document.getElementById('root'));
 
 App.defaultProps = {
   initialTasks: [],
-  filter: "All",
+  filter: 'All',
 };
 
 App.propTypes = {

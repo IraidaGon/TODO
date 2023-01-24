@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import "./tasks-filter.css";
+import './tasks-filter.css';
 
-const classSelected = "selected";
+const classSelected = 'selected';
 
 export default class TasksFilter extends Component {
   constructor(props) {
     super(props);
 
     this.getFilterButtons = () => {
-      return document.querySelectorAll(".filters button");
+      return document.querySelectorAll('.filters button');
     };
 
     this.selectButtonByFilter = (filter) => {
@@ -60,10 +60,10 @@ export default class TasksFilter extends Component {
 }
 
 TasksFilter.defaultProps = {
-  filter: "All",
+  filter: 'All',
 };
 
 TasksFilter.propTypes = {
-  filter: PropTypes.oneOf(["All", "Active", "Completed"]),
+  filter: PropTypes.oneOf(['All', 'Active', 'Completed']),
   onFilterChange: PropTypes.func,
 };

@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import "./App.css";
-import TaskList from "../task-list";
-import Footer from "../footer";
-import NewTaskForm from "../new-task-form";
+import React, { Component } from 'react';
+
+import './App.css';
+import TaskList from '../task-list';
+import Footer from '../footer';
+import NewTaskForm from '../new-task-form';
 
 export default class App extends Component {
   constructor(props) {
@@ -78,10 +79,7 @@ export default class App extends Component {
       this.setState((state) => {
         const index = this.findIndexByID(id);
 
-        const newTasksData = [
-          ...state.tasksData.slice(0, index),
-          ...state.tasksData.slice(index + 1),
-        ];
+        const newTasksData = [...state.tasksData.slice(0, index), ...state.tasksData.slice(index + 1)];
 
         return {
           tasksData: newTasksData,
