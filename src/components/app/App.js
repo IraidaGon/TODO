@@ -8,10 +8,10 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-    this.currentID = 1;
+    this.maxId = 1;
 
     this.incrementID = () => {
-      return this.currentID++;
+      return this.maxId++;
     };
 
     this.createTask = (
